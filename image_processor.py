@@ -40,3 +40,11 @@ def threshold(img, hue_name):
 
     res = cv2.bitwise_and(img, img, mask=mask)
     return area, location, res
+
+
+def open_img(filename):
+    return cv2.imread(filename)
+
+
+def save_img(img, filename):
+    return cv2.imwrite(filename, img)

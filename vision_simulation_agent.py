@@ -9,7 +9,7 @@ __author__ = 'josh'
 
 rotation_granularity = 0.25
 reading_threshold = 0
-robot_translation_speed = 4.5
+robot_translation_speed = 10
 robot_rotation_speed = 0.4
 
 cap = 20000
