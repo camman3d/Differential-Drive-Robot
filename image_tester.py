@@ -14,7 +14,10 @@ if hue_num == "all":
         area, location, res = image_processor.threshold(img, str(i))
         print("Results of image analysis for hue: " + str(i))
         print("  Area:   " + str(area))
-        print("  Center: " + str(location[0]) + ", " + str(location[1]))
+        if location is None:
+            print("  Center: None")
+        else:
+            print("  Center: " + str(location[0]) + ", " + str(location[1]))
         cv2.imshow("image", res)
         cv2.waitKey(5)
 
