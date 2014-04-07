@@ -10,7 +10,8 @@ thresh_cutoff = 127
 hues = {
     "green": 40,
     "blue": 110,
-    "red": -10
+    "red": -10,
+    "pink": 160
 }
 
 

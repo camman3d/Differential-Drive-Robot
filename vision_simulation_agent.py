@@ -82,12 +82,15 @@ class VisionSimulationAgent:
         # graph.plot_configuration_attraction(self.config)
 
     @staticmethod
-    def calculate_value(img, color, constant):
+    def calculate_value(img, color, constant, profile=False):
         # Do image analysis
         data = image_processor.threshold(img, color)
 
         # Normalize
-        value = min(cap, data[0])
+        if profile:
+            value = data[0]
+        else:
+            value = min(cap, data[0])
         if data[1] is not None:
             # Offset contains a number from -1 to 1
             w = image_width / 2
@@ -96,10 +99,10 @@ class VisionSimulationAgent:
             value *= weight
         return value * constant
 
-    def get_reading(self):
+    def get_reading(self, profile=False):
         img = self.get_image()
-        attract = self.calculate_value(img, "red", destination_constant)
-        repel = self.calculate_value(img, "green", obstacle_constant)
+        attract = self.calculate_value(img, "red", destination_constant, profile)
+        repel = self.calculate_value(img, "green", obstacle_constant, profile)
         return attract + repel
 
     def move_forward(self, duration):

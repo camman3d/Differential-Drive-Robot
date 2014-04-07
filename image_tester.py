@@ -1,17 +1,30 @@
 import sys
 import image_processor
-import pi_camera
+import cv2
 
 __author__ = 'josh'
 
-hue_num = sys.argv[1]
+in_filename = sys.argv[1]
+hue_num = sys.argv[2]
 
-filename = pi_camera.read()
-img = image_processor.open_img(filename)
-area, location, res = image_processor.threshold(img, hue_num)
+img = image_processor.open_img(in_filename)
 
-print("Results of image analysis for hue: " + hue_num)
-print("  Area:   " + str(area))
-print("  Center: " + str(location[0]) + ", " + str(location[1]))
+if hue_num == "all":
+    for i in range(300):
+        area, location, res = image_processor.threshold(img, str(i))
+        print("Results of image analysis for hue: " + str(i))
+        print("  Area:   " + str(area))
+        print("  Center: " + str(location[0]) + ", " + str(location[1]))
+        cv2.imshow("image", res)
+        cv2.waitKey(5)
 
-image_processor.save_img(res, "/tmp/mask.jpg")
+else:
+    area, location, res = image_processor.threshold(img, hue_num)
+    print("Results of image analysis for hue: " + hue_num)
+    print("  Area:   " + str(area))
+    if location is None:
+        print("  Center: None")
+    else:
+        print("  Center: " + str(location[0]) + ", " + str(location[1]))
+    out_filename = sys.argv[3]
+    image_processor.save_img(res, out_filename)
