@@ -1,5 +1,7 @@
 import time
-import motors
+
+from raspberrypi import motors
+
 
 __author__ = 'josh'
 

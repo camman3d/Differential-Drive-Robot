@@ -1,9 +1,11 @@
-import cv2
 import math
+
+import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-from attract import attract_full
-from configuration import Configuration
+
+from simulation.attract import attract_full
+
 
 __author__ = 'josh'
 

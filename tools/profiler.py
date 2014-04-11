@@ -1,4 +1,4 @@
-from vision_simulation_agent import VisionSimulationAgent
+from simulation.vision_simulation_agent import VisionSimulationAgent
 
 __author__ = 'josh'
 

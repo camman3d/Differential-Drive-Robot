@@ -1,7 +1,9 @@
 import math
+
 import cv2
+
 from attract import attract_full
-import graph
+from simulation import graph
 
 
 __author__ = 'josh'

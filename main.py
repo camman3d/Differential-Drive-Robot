@@ -1,10 +1,6 @@
-import math
 from mapping import world_renderer
 from mapping.world_model import WorldModel
-from simulation_agent import SimulationAgent
-from attract import attract_full
-from configuration import Configuration
-from vision_simulation_agent import VisionSimulationAgent
+from simulation.vision_simulation_agent import VisionSimulationAgent
 
 __author__ = 'josh'
 
