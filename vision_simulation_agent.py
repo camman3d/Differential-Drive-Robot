@@ -101,8 +101,8 @@ class VisionSimulationAgent:
 
     def get_reading(self, profile=False):
         img = self.get_image()
-        attract = self.calculate_value(img, "red", destination_constant, profile)
-        repel = self.calculate_value(img, "green", obstacle_constant, profile)
+        attract = self.calculate_value(img, "green", destination_constant, profile)
+        repel = self.calculate_value(img, "red", obstacle_constant, profile)
         return attract + repel
 
     def move_forward(self, duration):
@@ -123,50 +123,13 @@ class VisionSimulationAgent:
     def rotate_right(self, duration):
         self.robot[2] += robot_rotation_speed * duration
 
-        # agent = VisionSimulationAgent([256, 256, 0])
-        #
-        # ang = 0
-        # foobar = ""
-        # while ang < 2*math.pi:
-        #     agent.robot[2] = ang
-        #     # agent.robot[2] = 0.75*math.pi
-        #     # img = agent.get_image()
-        #
-        #     # for i in range(0, 300):
-        #     #     data = image_processor.threshold(img, "red")
-        #     #     cv2.imshow('frame', data[2])
-        #     #     print(i)
-        #     #     k = cv2.waitKey(100) & 0xFF
-        #
-        #     # agent.move_backward(2)
-        #     # agent.rotate_right(1)
-        #
-        #     # data = image_processor.threshold(img, "red")
-        #
-        #     # Normalize
-        #     # value = min(20000, data[0])
-        #     # weight = 1
-        #     # offset = 0
-        #     # if data[1] is not None:
-        #     #     Offset contains a number from -1 to 1
-        #         # offset = float(data[1][0] - 512) / 512.0
-        #         # offset = 0
-        #         # sigma = 0.5
-        #         # weight = (2 / (sigma * math.sqrt(2 * math.pi))) * math.e ** (-(offset ** 2) / (2 * sigma ** 2))
-        #     # value *= weight
-        #
-        #     value = agent.get_reading()
-        #     foobar += str(ang) + "\t" + str(value) + "\n"
-        #
-        #     # font = cv2.FONT_HERSHEY_SIMPLEX
-        #     # cv2.putText(img, str(offset), (10, 80), font, 1, (255, 255, 255), 2)
-        #     # cv2.putText(img, str(weight), (10, 180), font, 1, (255, 255, 255), 2)
-        #     # cv2.putText(img, str(value), (10, 180), font, 1, (255, 255, 255), 2)
-        #
-        #     cv2.imshow('frame1', agent.last_img)
-        #     k = cv2.waitKey(5) & 0xFF
-        #     # if k == 27:
-        #     #     break
-        #
-        #     ang += 0.1
-        # print(foobar)
+    def get_full_readings(self):
+        ang = 0
+        angles = []
+        values = []
+        while ang <= 2*math.pi:
+            self.robot[2] = ang
+            values.append(self.get_reading())
+            angles.append(ang)
+            ang += robot_rotation_speed * rotation_granularity * 5
+        return angles, values
