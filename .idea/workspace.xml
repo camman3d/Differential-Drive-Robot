@@ -26,7 +26,16 @@
       <file leaf-file-name="robot_agent.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robot_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="21" selection-start="2900" selection-end="2900" vertical-scroll-proportion="0.0" vertical-offset="1124" max-vertical-offset="1590">
+            <state line="104" column="21" selection-start="2900" selection-end="2900" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1590">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="10" selection-start="270" selection-end="270" vertical-scroll-proportion="0.22435898" vertical-offset="0" max-vertical-offset="468">
               <folding />
             </state>
           </provider>
@@ -35,7 +44,7 @@
       <file leaf-file-name="simulation_agent.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simulation_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="39" selection-start="3015" selection-end="3015" vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="1545">
+            <state line="50" column="0" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1545">
               <folding />
             </state>
           </provider>
@@ -44,7 +53,7 @@
       <file leaf-file-name="vision_simulation_agent.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vision_simulation_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="77" selection-start="2886" selection-end="2886" vertical-scroll-proportion="0.0" vertical-offset="1159" max-vertical-offset="2595">
+            <state line="104" column="77" selection-start="2886" selection-end="2886" vertical-scroll-proportion="0.0" vertical-offset="1560" max-vertical-offset="2655">
               <folding />
             </state>
           </provider>
@@ -53,7 +62,7 @@
       <file leaf-file-name="profiler.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/profiler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="18" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+            <state line="9" column="18" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225">
               <folding />
             </state>
           </provider>
@@ -62,10 +71,8 @@
       <file leaf-file-name="image_tester.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/image_tester.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="76" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state line="19" column="76" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="570">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,13 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_motors.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="test_motors.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_motors.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="13" selection-start="290" selection-end="290" vertical-scroll-proportion="0.64377683" vertical-offset="0" max-vertical-offset="466">
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state line="20" column="13" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="405">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,16 +107,7 @@
       <file leaf-file-name="image_processor.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/image_processor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="15" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blender_source.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blender_source.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="23" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="510">
+            <state line="39" column="16" selection-start="932" selection-end="940" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="840">
               <folding />
             </state>
           </provider>
@@ -131,9 +127,7 @@
         <option value="$PROJECT_DIR$/attract.py" />
         <option value="$PROJECT_DIR$/graph.py" />
         <option value="$PROJECT_DIR$/agent.py" />
-        <option value="$PROJECT_DIR$/simulation_agent.py" />
         <option value="$PROJECT_DIR$/blender_source.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/pi_camera.py" />
         <option value="$PROJECT_DIR$/image_processor.py" />
         <option value="$PROJECT_DIR$/vision_simulation_agent.py" />
@@ -142,6 +136,8 @@
         <option value="$PROJECT_DIR$/robot_agent.py" />
         <option value="$PROJECT_DIR$/motors.py" />
         <option value="$PROJECT_DIR$/test_motors.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/simulation_agent.py" />
       </list>
     </option>
   </component>
@@ -217,7 +213,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.profiler">
+  <component name="RunManager" selected="Python.main">
     <configuration default="false" name="attract" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -444,8 +440,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.profiler" />
-        <item index="1" class="java.lang.String" itemvalue="Python.main" />
+        <item index="0" class="java.lang.String" itemvalue="Python.main" />
+        <item index="1" class="java.lang.String" itemvalue="Python.profiler" />
         <item index="2" class="java.lang.String" itemvalue="Python.vision_simulation_agent" />
         <item index="3" class="java.lang.String" itemvalue="Python.graph" />
         <item index="4" class="java.lang.String" itemvalue="Python.attract" />
@@ -480,25 +476,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2797745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2797745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39832285" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37710842" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37620193" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -520,25 +516,26 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/configuration.py">
+    <entry file="file://$PROJECT_DIR$/blender_source.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
+        <state line="8" column="23" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="510">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="34" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/attract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="96" selection-start="337" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="765">
-          <folding />
-        </state>
+        <state line="14" column="96" selection-start="337" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="765" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="23" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="690">
-          <folding />
-        </state>
+        <state line="39" column="23" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="690" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
@@ -558,9 +555,7 @@
     <entry file="file://$PROJECT_DIR$/image_tester.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="22" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="330">
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -587,23 +582,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/configuration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="8" column="34" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/attract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="96" selection-start="337" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="765">
-          <folding />
-        </state>
+        <state line="14" column="96" selection-start="337" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="765" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="23" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="690">
-          <folding />
-        </state>
+        <state line="39" column="23" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="690" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
@@ -643,23 +632,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/configuration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="8" column="34" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/attract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="765">
-          <folding />
-        </state>
+        <state line="23" column="0" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="765" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
-          <folding />
-        </state>
+        <state line="15" column="0" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
@@ -678,23 +661,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/configuration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="8" column="34" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/attract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="765">
-          <folding />
-        </state>
+        <state line="23" column="0" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="765" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="44" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="315">
-          <folding />
-        </state>
+        <state line="14" column="44" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="315" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
@@ -706,23 +683,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/configuration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="8" column="34" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/attract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="16" selection-start="764" selection-end="776" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="765">
-          <folding />
-        </state>
+        <state line="28" column="16" selection-start="764" selection-end="776" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="765" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="39" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="315">
-          <folding />
-        </state>
+        <state line="2" column="39" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="315" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
@@ -734,23 +705,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/configuration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="8" column="34" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/attract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="16" selection-start="764" selection-end="776" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="765">
-          <folding />
-        </state>
+        <state line="28" column="16" selection-start="764" selection-end="776" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="765" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="62" selection-start="279" selection-end="341" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="315">
-          <folding />
-        </state>
+        <state line="14" column="62" selection-start="279" selection-end="341" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="315" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
@@ -767,23 +732,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/configuration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="8" column="34" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="23" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.0" vertical-offset="199" max-vertical-offset="690">
-          <folding />
-        </state>
+        <state line="39" column="23" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.0" vertical-offset="199" max-vertical-offset="690" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/attract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="96" selection-start="337" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <folding />
-        </state>
+        <state line="14" column="96" selection-start="337" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pi_camera.py">
@@ -802,23 +761,7 @@
     </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm30/python_stubs/-1199944087/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="5" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.33258426" vertical-offset="169" max-vertical-offset="76485">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simulation_agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="39" selection-start="3015" selection-end="3015" vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="1545">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="364" selection-end="408" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-          <folding />
-        </state>
+        <state line="31" column="5" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.33258426" vertical-offset="169" max-vertical-offset="76485" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vision_simulation_agent.py">
@@ -838,22 +781,6 @@
     <entry file="file://$PROJECT_DIR$/image_tester.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="76" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image_processor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="15" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="21" selection-start="2900" selection-end="2900" vertical-scroll-proportion="0.0" vertical-offset="1124" max-vertical-offset="1590">
           <folding />
         </state>
       </provider>
@@ -867,10 +794,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_motors.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="290" selection-end="290" vertical-scroll-proportion="0.64377683" vertical-offset="0" max-vertical-offset="466">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state line="20" column="13" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image_processor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="16" selection-start="932" selection-end="940" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="21" selection-start="2900" selection-end="2900" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simulation_agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="0" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="10" selection-start="270" selection-end="270" vertical-scroll-proportion="0.22435898" vertical-offset="0" max-vertical-offset="468">
+          <folding />
         </state>
       </provider>
     </entry>

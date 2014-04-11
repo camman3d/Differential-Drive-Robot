@@ -29,7 +29,7 @@ class SimulationAgent:
             reading = self.get_reading()
         self.rotate_right(rotation_granularity)
 
-        # graph.plot_configuration_attraction(self.config)
+        graph.plot_configuration_attraction(self.config)
 
     def search_local(self):
         """This will recalibrate the robot to turn to the optimal direction"""
@@ -47,7 +47,7 @@ class SimulationAgent:
             reading = self.get_reading()
         self.rotate_left(rotation_granularity)
 
-        # graph.plot_configuration_attraction(self.config)
+        graph.plot_configuration_attraction(self.config)
 
     def get_reading(self):
         return attract_full(self.config, self.config.robot[2])
