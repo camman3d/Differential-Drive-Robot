@@ -3,7 +3,7 @@ import math
 import cv2
 
 from attract import attract_full
-from simulation import graph
+from simulation import graph_configuration
 
 
 __author__ = 'josh'
@@ -31,7 +31,7 @@ class SimulationAgent:
             reading = self.get_reading()
         self.rotate_right(rotation_granularity)
 
-        graph.plot_configuration_attraction(self.config)
+        graph_configuration.plot_configuration_attraction(self.config)
 
     def search_local(self):
         """This will recalibrate the robot to turn to the optimal direction"""
@@ -49,7 +49,7 @@ class SimulationAgent:
             reading = self.get_reading()
         self.rotate_left(rotation_granularity)
 
-        graph.plot_configuration_attraction(self.config)
+        graph_configuration.plot_configuration_attraction(self.config)
 
     def get_reading(self):
         return attract_full(self.config, self.config.robot[2])
@@ -63,7 +63,7 @@ class SimulationAgent:
             self.config.robot[1] += dy
 
             # Draw and wait
-            graph.draw_configuration(self.config)
+            graph_configuration.draw_configuration(self.config)
             t += time_step
             cv2.waitKey(int(time_step * 100))
 
@@ -78,7 +78,7 @@ class SimulationAgent:
             self.config.robot[1] -= dy
 
             # Draw and wait
-            graph.draw_configuration(self.config)
+            graph_configuration.draw_configuration(self.config)
             t += time_step
             cv2.waitKey(int(time_step * 100))
 
@@ -88,7 +88,7 @@ class SimulationAgent:
             self.config.robot[2] += robot_rotation_speed
 
             # Draw and wait
-            graph.draw_configuration(self.config)
+            graph_configuration.draw_configuration(self.config)
             t += time_step
             cv2.waitKey(int(time_step * 100))
 
@@ -98,6 +98,33 @@ class SimulationAgent:
             self.config.robot[2] -= robot_rotation_speed
 
             # Draw and wait
-            graph.draw_configuration(self.config)
+            graph_configuration.draw_configuration(self.config)
             t += time_step
             cv2.waitKey(int(time_step * 100))
+
+    # Methods for round 2
+
+    def get_full_readings(self):
+        angles = []
+        values = []
+        self.orient(0)
+        while self.config.robot[2] <= 2*math.pi:
+            values.append(self.get_reading())
+            angles.append(self.config.robot[2])
+            self.config.robot[2] += 0.3
+        self.orient(0)
+
+        # self.orient(0)
+        # while self.config.robot[2] <= 2*math.pi:
+        #     values.append(self.get_reading())
+        #     angles.append(self.config.robot[2])
+        #     self.rotate_left(1)
+        # self.config.robot[2] -= 2*math.pi
+        return angles, values
+
+    def orient(self, angle):
+        # while self.config.robot[2] < angle:
+        #     self.rotate_left(0.5)
+        # while self.config.robot[2] > angle:
+        #     self.rotate_right(0.5)
+        self.config.robot[2] = angle

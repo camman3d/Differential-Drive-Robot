@@ -23,15 +23,20 @@ blender = BlenderSource()
 
 
 class VisionSimulationAgent:
-    def __init__(self, robot):
+    def __init__(self, robot, show_img):
         self.robot = robot
         self.last_img = None
+        self.show_img = show_img
         pass
 
     def get_image(self):
         blender.set(self.robot[0], self.robot[1], self.robot[2])
         img = blender.get()
         self.last_img = img
+
+        if self.show_img:
+            self.show()
+
         return img
 
     def show(self, render=False):
@@ -112,6 +117,9 @@ class VisionSimulationAgent:
         self.robot[0] += dx
         self.robot[1] += dy
 
+        if self.show_img:
+            self.show(True)
+
     def move_backward(self, duration):
         dx = math.cos(self.robot[2]) * robot_translation_speed * duration
         dy = math.sin(self.robot[2]) * robot_translation_speed * duration
@@ -134,3 +142,9 @@ class VisionSimulationAgent:
             angles.append(ang)
             ang += robot_rotation_speed * rotation_granularity * 5
         return angles, values
+
+    def orient(self, ang):
+        self.robot[2] = ang
+
+        if self.show_img:
+            self.show(True)
