@@ -24,8 +24,11 @@ def draw_configuration(config):
 
     # Draw the robot w/ a circle and a line
     cv2.circle(img, (int(config.robot[0]), int(config.robot[1])), size, (255, 0, 0), 3)
-    pt2 = int(config.robot[0] + size * math.cos(config.robot[2])), int(config.robot[1] + size * math.sin(config.robot[2]))
+    pt2 = int(config.robot[0] + size * math.cos(config.robot[2])), int(config.robot[1] - size * math.sin(config.robot[2]))
     cv2.line(img, (int(config.robot[0]), int(config.robot[1])), pt2, (255, 0, 0), 2)
+
+
+    # cv2.line(img, (10, 10), (25, 50), (255, 255, 0), 5)
 
     # Draw the destination
     cv2.circle(img, (int(config.destination[0]), int(config.destination[1])), size, (0, 255, 0), 3)

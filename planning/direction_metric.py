@@ -28,36 +28,53 @@ def derivative(f, x, dx=0.1):
 
 
 def q_reading(theta, world, lt):
-    x, y = world.size / 2 + reading_dist * math.cos(theta), world.size / 2 + reading_dist * math.sin(theta)
+    x, y = world.size / 2 + reading_dist * math.cos(theta), world.size / 2 - reading_dist * math.sin(theta)
     return world.grid[0][x][y]
 
 
 def q_little_turn(theta, w, last_theta):
     """Rewards for not turning very much"""
     d_theta = abs(theta - last_theta)
-    return abs(math.pi - d_theta) / math.pi + 1
+    return abs(math.pi - d_theta) / math.pi
+
+
+def q_enumerated_policy(reading, policy):
+    for i in range(len(policy) - 1):
+        low = policy[i][0]
+        high = policy[i + 1][0]
+        if low <= reading <= high:
+            percent = (reading - low) / (high - low)
+            val = percent * policy[i][1] + (1 - percent) * policy[i+1][1]
+            return val
+    return 0
 
 
 def q_obstacle_edge(theta, world, lt):
     """Rewards for heading to an obstacle edge"""
-    w_max = abs(np.min(world.grid[0]))
+    # This policy is ok, but it brings the robot too close to the obstacles
+    # policy = [
+    #     (0, 0),
+    #     (0.05, 0),
+    #     (0.15, 0.75),
+    #     (0.2, 1),
+    #     (0.25, 0.75),
+    #     (0.3, 0.25),
+    #     (0.4, 0)
+    # ]
     policy = [
-        (0.01, 0.1, 1),
-        (0.1, 0.2, 2),
-        (0.2, 0.3, 1),
-        (0.3, 0.35, 0.4),
-        (0.35, 0.65, 0.1),
-        (0.55, 0.65, -0.1),
-        (0.65, 0.9, -0.9),
-        (0.9, 1, -1)
+        (0, 0),
+        (0.03, 0),
+        (0.1, 1),
+        (0.15, 0),
+        # (0.2, 1),
+        # (0.25, 0.75),
+        # (0.3, 0.25),
+        # (0.4, 0)
     ]
-    reading = abs(q_reading(theta, world, lt))
-    for p in policy:
-        low = p[0] * w_max
-        high = p[1] * w_max
-        if low <= reading <= high:
-            return p[2]
-    return 0
+    w_max = abs(np.min(world.grid[0]))
+    reading = abs(q_reading(theta, world, 0)) / w_max
+    val = q_enumerated_policy(reading, policy)
+    return val
 
 
 def q_obstacle_buffer(theta, world, lt):
@@ -65,29 +82,52 @@ def q_obstacle_buffer(theta, world, lt):
     def f(x):
         return q_reading(x, world, lt)
     slope = derivative(f, theta)
-    return 1 - min(abs(slope), 1)
+    return max(min(1 - abs(slope), 1), 0)
+
+
+def q_normalized_reading(theta, world, lt):
+    w_max = np.max(world.grid[0])
+    w_min = np.min(world.grid[0])
+    reading = q_reading(theta, world, lt)
+    if reading < 0:
+        return 0.5 - abs(reading / w_min) / 2
+    else:
+        if w_max == 0:
+            return 0.5
+        return 0.5 + abs(reading / w_max) / 2
+
+
+def q_combined(theta, world, last_theta, metrics, weights):
+    val = 1
+    for i in range(len(metrics)):
+        result = metrics[i](theta, world, last_theta) * weights[i]
+        result += 1 - weights[i]
+        val *= result
+    return val
 
 
 def q_explore(theta, world, last_theta):
-    a = q_obstacle_edge(theta, world, last_theta)
-    b = q_little_turn(theta, world, last_theta)
-    c = 0.5 * q_obstacle_buffer(theta, world, last_theta) + 0.1
-    return a * b * c
+    # metrics = [q_obstacle_edge, q_little_turn, q_obstacle_buffer]
+    # weights = [1, 0.5, 0.3]
+    metrics = [q_obstacle_edge, q_little_turn, q_normalized_reading]
+    weights = [0.8, 0.5, 1]
+    return q_combined(theta, world, last_theta, metrics, weights)
 
 
 def q_destination(theta, world, last_theta):
-    a = q_reading(theta, world, last_theta)
-    b = q_obstacle_buffer(theta, world, last_theta)
-    return a * b
+    metrics = [q_reading, q_obstacle_buffer]
+    weights = [1, 0.3]
+    return q_combined(theta, world, last_theta, metrics, weights)
 
 
-def q_main(theta, world, last_theta):
+def q_main(theta, world, last_theta, threshold=0):
     w_max = np.max(world.grid[0])
-    if w_max > 0:
+    if w_max > threshold:
+        # print("Using destination metric")
         return q_destination(theta, world, last_theta)
     else:
+        # print("Using exploration metric")
         return q_explore(theta, world, last_theta)
-
 
 
 def max_metric(world, last_theta, metric):

@@ -26,7 +26,7 @@
       <file leaf-file-name="world_model.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mapping/world_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="40" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="2370">
+            <state line="11" column="45" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="1290">
               <folding />
             </state>
           </provider>
@@ -35,7 +35,7 @@
       <file leaf-file-name="attract.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simulation/attract.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="96" selection-start="337" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="765">
+            <state line="29" column="59" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="world_renderer.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mapping/world_renderer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="38" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="810">
+            <state line="27" column="63" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0" vertical-offset="186" max-vertical-offset="780">
               <folding />
             </state>
           </provider>
@@ -53,18 +53,21 @@
       <file leaf-file-name="simulation_agent.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simulation/simulation_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="24" selection-start="3489" selection-end="3489" vertical-scroll-proportion="0.0" vertical-offset="1210" max-vertical-offset="1950">
+            <state line="77" column="34" selection-start="2356" selection-end="2356" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1620">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vision_simulation_agent.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="vision_simulation_agent.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simulation/vision_simulation_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="22" selection-start="84" selection-end="99" vertical-scroll-proportion="0.15957446" vertical-offset="0" max-vertical-offset="2325">
+            <state line="136" column="19" selection-start="3828" selection-end="3828" vertical-scroll-proportion="0.0" vertical-offset="1795" max-vertical-offset="2775">
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
+                <marker date="1397609896000" expanded="true" signature="378:5022" placeholder="..." />
+                <marker date="1397609896000" expanded="true" signature="3064:3323" placeholder="..." />
+                <marker date="1397609896000" expanded="true" signature="4939:5022" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -88,10 +91,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="direction_metric.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="direction_metric.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/planning/direction_metric.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="50" selection-start="2181" selection-end="2181" vertical-scroll-proportion="0.0" vertical-offset="842" max-vertical-offset="1575">
+            <state line="70" column="18" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.767642" vertical-offset="589" max-vertical-offset="2175">
               <folding />
             </state>
           </provider>
@@ -100,10 +103,19 @@
       <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="5" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.0" vertical-offset="535" max-vertical-offset="1080">
+            <state line="95" column="18" selection-start="2882" selection-end="2882" vertical-scroll-proportion="0.0" vertical-offset="1039" max-vertical-offset="1650">
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graph_metric.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/planning/graph_metric.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -134,19 +146,21 @@
         <option value="$PROJECT_DIR$/vision_simulation_agent.py" />
         <option value="$PROJECT_DIR$/simulation/graph.py" />
         <option value="$PROJECT_DIR$/planning/metric.py" />
+        <option value="$PROJECT_DIR$/simulation/vision_simulation_agent.py" />
+        <option value="$PROJECT_DIR$/simulation/graph_configuration.py" />
+        <option value="$PROJECT_DIR$/simulation/simulation_agent.py" />
+        <option value="$PROJECT_DIR$/planning/graph_metric.py" />
         <option value="$PROJECT_DIR$/mapping/world_renderer.py" />
         <option value="$PROJECT_DIR$/mapping/world_model.py" />
-        <option value="$PROJECT_DIR$/planning/graph_metric.py" />
-        <option value="$PROJECT_DIR$/simulation/simulation_agent.py" />
-        <option value="$PROJECT_DIR$/planning/direction_metric.py" />
-        <option value="$PROJECT_DIR$/simulation/vision_simulation_agent.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/planning/direction_metric.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="x" value="1440" />
+    <option name="width" value="1280" />
+    <option name="height" value="1024" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -554,18 +568,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="1440" y="0" width="1280" height="1024" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31501058" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39539748" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35504368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39330545" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37379807" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3253138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -591,7 +605,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="33" />
+      <option name="time" value="64" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -669,6 +683,9 @@
         <state line="24" column="27" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="2610">
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+            <marker date="1397609896000" expanded="true" signature="378:5022" placeholder="..." />
+            <marker date="1397609896000" expanded="true" signature="3064:3323" placeholder="..." />
+            <marker date="1397609896000" expanded="true" signature="4939:5022" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -822,13 +839,6 @@
         <state line="8" column="23" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simulation/attract.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="96" selection-start="337" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/profiler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="18" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
@@ -865,32 +875,6 @@
         <state line="23" column="0" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simulation/graph_configuration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="4" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="630" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapping/world_renderer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="38" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simulation/simulation_agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="24" selection-start="3489" selection-end="3489" vertical-scroll-proportion="0.0" vertical-offset="1210" max-vertical-offset="1950">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/planning/graph_metric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="0.22770399" vertical-offset="0" max-vertical-offset="527">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/lib/function_base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1631" column="0" selection-start="51273" selection-end="51273" vertical-scroll-proportion="0.2946128" vertical-offset="24290" max-vertical-offset="53235">
@@ -898,35 +882,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mapping/world_model.py">
+    <entry file="file://$PROJECT_DIR$/simulation/vision_simulation_agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="40" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2370">
+        <state line="136" column="19" selection-start="3828" selection-end="3828" vertical-scroll-proportion="0.0" vertical-offset="1795" max-vertical-offset="2775">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1397609896000" expanded="true" signature="378:5022" placeholder="..." />
+            <marker date="1397609896000" expanded="true" signature="3064:3323" placeholder="..." />
+            <marker date="1397609896000" expanded="true" signature="4939:5022" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simulation/attract.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="59" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0" vertical-offset="236" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/planning/direction_metric.py">
+    <entry file="file://$PROJECT_DIR$/simulation/graph_configuration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="50" selection-start="2181" selection-end="2181" vertical-scroll-proportion="0.0" vertical-offset="842" max-vertical-offset="1575">
+        <state line="26" column="68" selection-start="702" selection-end="702" vertical-scroll-proportion="0.4870912" vertical-offset="17" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planning/graph_metric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mapping/world_renderer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="63" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0" vertical-offset="186" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mapping/world_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="45" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="1290">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simulation/simulation_agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="34" selection-start="2356" selection-end="2356" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1620">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="5" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.0" vertical-offset="535" max-vertical-offset="1080">
+        <state line="95" column="18" selection-start="2882" selection-end="2882" vertical-scroll-proportion="0.0" vertical-offset="1039" max-vertical-offset="1650">
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simulation/vision_simulation_agent.py">
+    <entry file="file://$PROJECT_DIR$/planning/direction_metric.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="22" selection-start="84" selection-end="99" vertical-scroll-proportion="0.15957446" vertical-offset="0" max-vertical-offset="2325">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state line="70" column="18" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.767642" vertical-offset="589" max-vertical-offset="2175">
+          <folding />
         </state>
       </provider>
     </entry>

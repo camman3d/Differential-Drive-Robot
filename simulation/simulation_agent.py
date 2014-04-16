@@ -60,7 +60,7 @@ class SimulationAgent:
             dx = math.cos(self.config.robot[2]) * robot_translation_speed
             dy = math.sin(self.config.robot[2]) * robot_translation_speed
             self.config.robot[0] += dx
-            self.config.robot[1] += dy
+            self.config.robot[1] -= dy
 
             # Draw and wait
             graph_configuration.draw_configuration(self.config)
@@ -75,56 +75,34 @@ class SimulationAgent:
             dx = math.cos(self.config.robot[2]) * robot_translation_speed
             dy = math.sin(self.config.robot[2]) * robot_translation_speed
             self.config.robot[0] -= dx
-            self.config.robot[1] -= dy
+            self.config.robot[1] += dy
 
             # Draw and wait
             graph_configuration.draw_configuration(self.config)
             t += time_step
             cv2.waitKey(int(time_step * 100))
 
-    def rotate_left(self, duration):
-        t = 0
-        while t < duration:
+    def rotate_left(self, theta):
+        dt = 0
+        while dt < theta:
             self.config.robot[2] += robot_rotation_speed
+            self.config.robot[2] %= math.pi * 2
+            dt += robot_rotation_speed
 
             # Draw and wait
             graph_configuration.draw_configuration(self.config)
-            t += time_step
             cv2.waitKey(int(time_step * 100))
 
-    def rotate_right(self, duration):
-        t = 0
-        while t < duration:
+    def rotate_right(self, theta):
+        dt = 0
+        while dt < theta:
             self.config.robot[2] -= robot_rotation_speed
+            self.config.robot[2] %= math.pi * 2
+            dt += robot_rotation_speed
 
             # Draw and wait
             graph_configuration.draw_configuration(self.config)
-            t += time_step
             cv2.waitKey(int(time_step * 100))
 
-    # Methods for round 2
-
-    def get_full_readings(self):
-        angles = []
-        values = []
-        self.orient(0)
-        while self.config.robot[2] <= 2*math.pi:
-            values.append(self.get_reading())
-            angles.append(self.config.robot[2])
-            self.config.robot[2] += 0.3
-        self.orient(0)
-
-        # self.orient(0)
-        # while self.config.robot[2] <= 2*math.pi:
-        #     values.append(self.get_reading())
-        #     angles.append(self.config.robot[2])
-        #     self.rotate_left(1)
-        # self.config.robot[2] -= 2*math.pi
-        return angles, values
-
-    def orient(self, angle):
-        # while self.config.robot[2] < angle:
-        #     self.rotate_left(0.5)
-        # while self.config.robot[2] > angle:
-        #     self.rotate_right(0.5)
-        self.config.robot[2] = angle
+    def get_angle(self):
+        return self.config.robot[2]
