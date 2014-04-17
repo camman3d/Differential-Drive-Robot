@@ -20,6 +20,9 @@ image_width = 800
 destination_constant = 1
 obstacle_constant = -1
 
+left_speed = 0.745643442
+right_speed = 0.688740167
+
 
 
 class RobotAgent:

@@ -115,20 +115,17 @@ def q_explore(theta, world, last_theta):
 
 
 def q_destination(theta, world, last_theta):
-    metrics = [q_reading, q_obstacle_buffer]
-    weights = [1, 0.3]
+    metrics = [q_obstacle_edge, q_little_turn, q_normalized_reading]
+    weights = [0.7, 0.3, 1]
     return q_combined(theta, world, last_theta, metrics, weights)
 
 
-def q_main(theta, world, last_theta, threshold=0):
-    # w_max = np.max(world.grid[0])
-    # if w_max > threshold:
-    #     print("Using destination metric")
-    #     return q_destination(theta, world, last_theta)
-    # else:
-        # print("Using exploration metric")
-        # return q_explore(theta, world, last_theta)
-    return q_explore(theta, world, last_theta)
+def q_main(theta, world, last_theta, threshold=0.75):
+    reading = q_normalized_reading(theta, world, last_theta)
+    if reading > threshold:
+        return q_destination(theta, world, last_theta)
+    else:
+        return q_explore(theta, world, last_theta)
 
 
 def max_metric(world, last_theta, metric):

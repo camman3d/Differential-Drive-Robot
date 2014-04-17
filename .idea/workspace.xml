@@ -35,7 +35,7 @@
       <file leaf-file-name="world_renderer.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mapping/world_renderer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="63" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0" vertical-offset="186" max-vertical-offset="780">
+            <state line="33" column="26" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
               <folding />
             </state>
           </provider>
@@ -85,22 +85,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_motors.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="test_motors.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tools/test_motors.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="165" selection-end="165" vertical-scroll-proportion="0.2935421" vertical-offset="0" max-vertical-offset="1065">
+            <state line="7" column="34" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="31" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1665">
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state line="78" column="42" selection-start="2535" selection-end="2535" vertical-scroll-proportion="0.5984252" vertical-offset="670" max-vertical-offset="1545">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -108,7 +106,7 @@
       <file leaf-file-name="direction_metric.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/planning/direction_metric.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="45" selection-start="3712" selection-end="3712" vertical-scroll-proportion="0.0" vertical-offset="1645" max-vertical-offset="2190">
+            <state line="130" column="36" selection-start="3668" selection-end="3668" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="2145">
               <folding />
             </state>
           </provider>
@@ -152,19 +150,20 @@
         <option value="$PROJECT_DIR$/simulation/graph_configuration.py" />
         <option value="$PROJECT_DIR$/simulation/simulation_agent.py" />
         <option value="$PROJECT_DIR$/planning/graph_metric.py" />
-        <option value="$PROJECT_DIR$/mapping/world_renderer.py" />
         <option value="$PROJECT_DIR$/simulation/vision_simulation_agent.py" />
         <option value="$PROJECT_DIR$/mapping/world_model.py" />
-        <option value="$PROJECT_DIR$/planning/direction_metric.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/tools/test_motors.py" />
         <option value="$PROJECT_DIR$/raspberrypi/robot_agent.py" />
+        <option value="$PROJECT_DIR$/mapping/world_renderer.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/planning/direction_metric.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="x" value="1440" />
+    <option name="width" value="1280" />
+    <option name="height" value="1024" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -311,24 +310,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration default="false" name="graph" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RoboticsProject" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/simulation/graph_configuration.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
     <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -404,6 +385,24 @@
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test_motors" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RoboticsProject" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/test_motors.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -529,19 +528,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.graph" />
-      <item index="1" class="java.lang.String" itemvalue="Python.main" />
-      <item index="2" class="java.lang.String" itemvalue="Python.vision_simulation_agent" />
-      <item index="3" class="java.lang.String" itemvalue="Python.profiler" />
-      <item index="4" class="java.lang.String" itemvalue="Python.world_renderer" />
+      <item index="0" class="java.lang.String" itemvalue="Python.main" />
+      <item index="1" class="java.lang.String" itemvalue="Python.vision_simulation_agent" />
+      <item index="2" class="java.lang.String" itemvalue="Python.profiler" />
+      <item index="3" class="java.lang.String" itemvalue="Python.world_renderer" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test_motors" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.world_renderer" />
-        <item index="2" class="java.lang.String" itemvalue="Python.profiler" />
-        <item index="3" class="java.lang.String" itemvalue="Python.vision_simulation_agent" />
-        <item index="4" class="java.lang.String" itemvalue="Python.graph" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test_motors" />
+        <item index="2" class="java.lang.String" itemvalue="Python.world_renderer" />
+        <item index="3" class="java.lang.String" itemvalue="Python.profiler" />
+        <item index="4" class="java.lang.String" itemvalue="Python.vision_simulation_agent" />
       </list>
     </recent_temporary>
   </component>
@@ -572,18 +571,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="1440" y="0" width="1280" height="1024" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31501058" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35504368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45192307" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32451922" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28242677" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -621,9 +620,7 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="19" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="390">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -669,9 +666,7 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="13" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="390">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -724,9 +719,7 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="25" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="360">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -759,9 +752,7 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="19" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="945">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -787,9 +778,7 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="19" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="945">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -815,9 +804,7 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="11" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="945">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -886,20 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simulation/graph_configuration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="68" selection-start="702" selection-end="702" vertical-scroll-proportion="0.4870912" vertical-offset="17" max-vertical-offset="675">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mapping/world_renderer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="63" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0" vertical-offset="186" max-vertical-offset="780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simulation/simulation_agent.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="77" column="34" selection-start="2356" selection-end="2356" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1620">
@@ -936,32 +909,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/planning/direction_metric.py">
+    <entry file="file://$PROJECT_DIR$/raspberrypi/robot_agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="45" selection-start="3712" selection-end="3712" vertical-scroll-proportion="0.0" vertical-offset="1645" max-vertical-offset="2190">
+        <state line="40" column="0" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0" vertical-offset="1274" max-vertical-offset="1785">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/raspberrypi/robot_agent.py">
+    <entry file="file://$PROJECT_DIR$/tools/test_motors.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="25" selection-start="3148" selection-end="3148" vertical-scroll-proportion="0.88258314" vertical-offset="1199" max-vertical-offset="1740">
+        <state line="7" column="34" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simulation/graph_configuration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="68" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mapping/world_renderer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="26" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planning/direction_metric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="36" selection-start="3668" selection-end="3668" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="2145">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="31" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1665">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/test_motors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="165" selection-end="165" vertical-scroll-proportion="0.2935421" vertical-offset="0" max-vertical-offset="1065">
+        <state line="78" column="42" selection-start="2535" selection-end="2535" vertical-scroll-proportion="0.5984252" vertical-offset="670" max-vertical-offset="1545">
           <folding />
         </state>
       </provider>

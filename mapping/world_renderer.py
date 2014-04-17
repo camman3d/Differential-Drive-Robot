@@ -1,4 +1,5 @@
 import cv2
+import math
 import numpy as np
 from mapping.world_model import WorldModel
 
@@ -7,7 +8,7 @@ pixelSize = 2
 showing = False
 
 
-def render(world):
+def render(world, angle=None):
     global showing
     showing = False
     size = world.size * pixelSize
@@ -26,6 +27,13 @@ def render(world):
             for x_p in range(pixelSize):
                 for y_p in range(pixelSize):
                     img[pixelSize * y + y_p][pixelSize * x + x_p] = value
+
+    if angle is not None:
+        half = int(size/2)
+        quarter = int(half/2)
+        pt1 = (half, half)
+        pt2 = (half + int(quarter*math.cos(angle)), half - int(quarter*math.sin(angle)))
+        cv2.line(img, pt1, pt2, (1, 1, 0), 4)
 
     cv2.imshow("World", img)
     cv2.waitKey(0)
