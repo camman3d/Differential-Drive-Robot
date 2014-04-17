@@ -1,7 +1,9 @@
 import math
+
 import cv2
+
 from attract import attract_full
-import graph
+from simulation import graph_configuration
 
 
 __author__ = 'josh'
@@ -29,7 +31,7 @@ class SimulationAgent:
             reading = self.get_reading()
         self.rotate_right(rotation_granularity)
 
-        # graph.plot_configuration_attraction(self.config)
+        graph_configuration.plot_configuration_attraction(self.config)
 
     def search_local(self):
         """This will recalibrate the robot to turn to the optimal direction"""
@@ -47,7 +49,7 @@ class SimulationAgent:
             reading = self.get_reading()
         self.rotate_left(rotation_granularity)
 
-        # graph.plot_configuration_attraction(self.config)
+        graph_configuration.plot_configuration_attraction(self.config)
 
     def get_reading(self):
         return attract_full(self.config, self.config.robot[2])
@@ -58,10 +60,10 @@ class SimulationAgent:
             dx = math.cos(self.config.robot[2]) * robot_translation_speed
             dy = math.sin(self.config.robot[2]) * robot_translation_speed
             self.config.robot[0] += dx
-            self.config.robot[1] += dy
+            self.config.robot[1] -= dy
 
             # Draw and wait
-            graph.draw_configuration(self.config)
+            graph_configuration.draw_configuration(self.config)
             t += time_step
             cv2.waitKey(int(time_step * 100))
 
@@ -73,29 +75,34 @@ class SimulationAgent:
             dx = math.cos(self.config.robot[2]) * robot_translation_speed
             dy = math.sin(self.config.robot[2]) * robot_translation_speed
             self.config.robot[0] -= dx
-            self.config.robot[1] -= dy
+            self.config.robot[1] += dy
 
             # Draw and wait
-            graph.draw_configuration(self.config)
+            graph_configuration.draw_configuration(self.config)
             t += time_step
             cv2.waitKey(int(time_step * 100))
 
-    def rotate_left(self, duration):
-        t = 0
-        while t < duration:
+    def rotate_left(self, theta):
+        dt = 0
+        while dt < theta:
             self.config.robot[2] += robot_rotation_speed
+            self.config.robot[2] %= math.pi * 2
+            dt += robot_rotation_speed
 
             # Draw and wait
-            graph.draw_configuration(self.config)
-            t += time_step
+            graph_configuration.draw_configuration(self.config)
             cv2.waitKey(int(time_step * 100))
 
-    def rotate_right(self, duration):
-        t = 0
-        while t < duration:
+    def rotate_right(self, theta):
+        dt = 0
+        while dt < theta:
             self.config.robot[2] -= robot_rotation_speed
+            self.config.robot[2] %= math.pi * 2
+            dt += robot_rotation_speed
 
             # Draw and wait
-            graph.draw_configuration(self.config)
-            t += time_step
+            graph_configuration.draw_configuration(self.config)
             cv2.waitKey(int(time_step * 100))
+
+    def get_angle(self):
+        return self.config.robot[2]
