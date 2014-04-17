@@ -15,6 +15,11 @@ class WorldModel:
         # Prepare for update
         self.grid[1] = np.zeros((self.size, self.size))
 
+        # Sort the stuff
+        data = zip(angles, values)
+        data = sorted(data, key=lambda x: x[0])
+        angles, values = map(lambda e: e[0], data), map(lambda e: e[1], data)
+
         # Maximum interpolation step
         # angle_step = 0.025
         location = self.size / 2, self.size / 2

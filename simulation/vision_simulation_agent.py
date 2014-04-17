@@ -126,55 +126,13 @@ class VisionSimulationAgent:
         self.robot[0] -= dx
         self.robot[1] -= dy
 
-    def rotate_left(self, duration):
-        self.robot[2] -= robot_rotation_speed * duration
+    def rotate_left(self, theta):
+        self.robot[2] -= theta
+        self.robot[2] %= math.pi * 2
 
-    def rotate_right(self, duration):
-        self.robot[2] += robot_rotation_speed * duration
+    def rotate_right(self, theta):
+        self.robot[2] += theta
+        self.robot[2] %= math.pi * 2
 
-    def get_full_readings(self):
-        ang = 0
-        angles = []
-        values = []
-        while ang <= 2*math.pi:
-            self.robot[2] = ang
-            values.append(self.get_reading())
-            angles.append(ang)
-            ang += robot_rotation_speed * rotation_granularity * 5
-        return angles, values
-
-    def get_local_readings(self):
-        angles = []
-        values = []
-
-        last_angle = 0
-        reading = self.get_reading()
-        if reading == 0:
-            while reading == 0:
-                last_angle = self.robot[2]
-                self.rotate_left(0.5)
-                reading = self.get_reading()
-        else:
-            while reading != 0:
-                self.rotate_right(0.5)
-                reading = self.get_reading()
-                last_angle = self.robot[2]
-
-        values.append(0)
-        angles.append(last_angle)
-        while reading != 0:
-            values.append(reading)
-            angles.append(self.robot[2])
-            self.rotate_left(0.5)
-            reading = self.get_reading()
-
-        values.append(0)
-        angles.append(self.robot[2])
-
-        return angles, values
-
-    def orient(self, ang):
-        self.robot[2] = ang
-
-        if self.show_img:
-            self.show(True)
+    def get_angle(self):
+        return self.robot[2]

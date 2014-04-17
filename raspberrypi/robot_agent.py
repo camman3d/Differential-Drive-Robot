@@ -25,6 +25,7 @@ obstacle_constant = -1
 class RobotAgent:
     def __init__(self):
         self.last_img = None
+        self.angle = 0
         pass
 
     def get_image(self):
@@ -95,12 +96,21 @@ class RobotAgent:
         time.sleep(duration * robot_translation_time)
         motors.stop()
 
-    def rotate_left(self, duration):
+    def rotate_left(self, theta):
+        duration = left_speed * theta
         motors.rotate_left()
-        time.sleep(duration * robot_rotation_time)
+        time.sleep(duration)
         motors.stop()
+        self.angle += theta
+        self.angle %= 2*math.pi
 
-    def rotate_right(self, duration):
+    def rotate_right(self, theta):
+        duration = right_speed * theta
         motors.rotate_right()
-        time.sleep(duration * robot_rotation_time)
+        time.sleep(duration)
         motors.stop()
+        self.angle -= theta
+        self.angle %= 2*math.pi
+
+    def get_angle(self):
+        return self.angle

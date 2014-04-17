@@ -121,13 +121,14 @@ def q_destination(theta, world, last_theta):
 
 
 def q_main(theta, world, last_theta, threshold=0):
-    w_max = np.max(world.grid[0])
-    if w_max > threshold:
-        # print("Using destination metric")
-        return q_destination(theta, world, last_theta)
-    else:
+    # w_max = np.max(world.grid[0])
+    # if w_max > threshold:
+    #     print("Using destination metric")
+    #     return q_destination(theta, world, last_theta)
+    # else:
         # print("Using exploration metric")
-        return q_explore(theta, world, last_theta)
+        # return q_explore(theta, world, last_theta)
+    return q_explore(theta, world, last_theta)
 
 
 def max_metric(world, last_theta, metric):
