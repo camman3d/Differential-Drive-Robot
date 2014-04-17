@@ -58,12 +58,12 @@ def move_backward():
     move_b(False)
 
 def rotate_left():
-    move_a(False)
-    move_b(True)
-
-def rotate_right():
     move_a(True)
     move_b(False)
+
+def rotate_right():
+    move_a(False)
+    move_b(True)
 
 def stop():
     gpio.output(a_in1, False)
