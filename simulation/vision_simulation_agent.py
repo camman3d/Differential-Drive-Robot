@@ -19,19 +19,18 @@ image_width = 1024
 destination_constant = 1
 obstacle_constant = -1
 
-blender = BlenderSource()
-
 
 class VisionSimulationAgent:
-    def __init__(self, robot, show_img):
+    def __init__(self, robot, show_img, env):
         self.robot = robot
         self.last_img = None
         self.show_img = show_img
+        self.blender = BlenderSource(env)
         pass
 
     def get_image(self):
-        blender.set(self.robot[0], self.robot[1], self.robot[2])
-        img = blender.get()
+        self.blender.set(self.robot[0], self.robot[1], self.robot[2])
+        img = self.blender.get()
         self.last_img = img
 
         if self.show_img:
@@ -127,11 +126,11 @@ class VisionSimulationAgent:
         self.robot[1] -= dy
 
     def rotate_left(self, theta):
-        self.robot[2] -= theta
+        self.robot[2] += theta
         self.robot[2] %= math.pi * 2
 
     def rotate_right(self, theta):
-        self.robot[2] += theta
+        self.robot[2] -= theta
         self.robot[2] %= math.pi * 2
 
     def get_angle(self):

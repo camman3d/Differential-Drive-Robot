@@ -85,3 +85,17 @@ class WorldModel:
             if e2 < dx:
                 err += dx
                 y0 += sy
+
+    def get_reading(self, angle):
+        reading_dist = 25
+        x, y = self.size / 2 + reading_dist * math.cos(angle), self.size / 2 - reading_dist * math.sin(angle)
+        return self.grid[0][x][y]
+
+    def get_min(self):
+        return np.min(self.grid[0])
+
+    def get_max(self):
+        return np.max(self.grid[0])
+
+    def is_valid(self, angle):
+        return True

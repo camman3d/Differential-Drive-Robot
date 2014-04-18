@@ -6,13 +6,13 @@ __author__ = 'josh'
 
 class BlenderSource:
 
-    def __init__(self):
+    def __init__(self, env="env1.blend"):
         env_path = "/Users/josh/Documents/School/Spring 2014/Robotics/Blender Environments/"
         self.image_dest = "render"
         self.camera = env_path + "camera.data"
         self.image_file = env_path + self.image_dest + "0000.png"
         self.blender = "/Applications/Blender/blender.app/Contents/MacOS/blender"
-        self.env = env_path + "env1.blend"
+        self.env = env_path + env
         self.script = env_path + "position.py"
 
     def get(self):
