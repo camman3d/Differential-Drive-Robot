@@ -4,9 +4,6 @@ import numpy as np
 __author__ = 'josh'
 
 
-reading_dist = 25
-
-
 def derivative(f, x, dx=0.1):
     # Estimate the derivative based on seven readings.
     # Using seven readings provides a decent amount of smoothing
@@ -28,8 +25,7 @@ def derivative(f, x, dx=0.1):
 
 
 def q_reading(theta, world, lt):
-    x, y = world.size / 2 + reading_dist * math.cos(theta), world.size / 2 - reading_dist * math.sin(theta)
-    return world.grid[0][x][y]
+    return world.get_reading(theta)
 
 
 def q_little_turn(theta, w, last_theta):
@@ -44,7 +40,7 @@ def q_enumerated_policy(reading, policy):
         high = policy[i + 1][0]
         if low <= reading <= high:
             percent = (reading - low) / (high - low)
-            val = percent * policy[i][1] + (1 - percent) * policy[i+1][1]
+            val = percent * policy[i+1][1] + (1 - percent) * policy[i][1]
             return val
     return 0
 
@@ -61,18 +57,37 @@ def q_obstacle_edge(theta, world, lt):
     #     (0.3, 0.25),
     #     (0.4, 0)
     # ]
+
+    # This policy works pretty well
+    # policy = [
+    #     (0, 0),
+    #     (0.03, 0),
+    #     (0.1, 1),
+    #     (0.15, 0)
+    # ]
+
+    # This one's ok too
+    # policy = [
+    #     (0, 0),
+    #     (0.02, 0),
+    #     (0.05, 1),
+    #     (0.1, 0)
+    # ]
+
+    # This is good
     policy = [
         (0, 0),
-        (0.03, 0),
-        (0.1, 1),
-        (0.15, 0),
-        # (0.2, 1),
-        # (0.25, 0.75),
-        # (0.3, 0.25),
-        # (0.4, 0)
+        (0.05, 1),
+        (0.1, 0.25),
+        (1, 0)
     ]
-    w_max = abs(np.min(world.grid[0]))
-    reading = abs(q_reading(theta, world, 0)) / w_max
+    w_max = abs(world.get_min())
+    if w_max == 0:
+        return 0
+    reading = q_reading(theta, world, 0)
+    if reading > 0:
+        return 0
+    reading = abs(reading) / w_max
     val = q_enumerated_policy(reading, policy)
     return val
 
@@ -86,8 +101,8 @@ def q_obstacle_buffer(theta, world, lt):
 
 
 def q_normalized_reading(theta, world, lt):
-    w_max = np.max(world.grid[0])
-    w_min = np.min(world.grid[0])
+    w_max = world.get_max()
+    w_min = world.get_min()
     reading = q_reading(theta, world, lt)
     if reading < 0:
         return 0.5 - abs(reading / w_min) / 2
@@ -115,28 +130,31 @@ def q_explore(theta, world, last_theta):
 
 
 def q_destination(theta, world, last_theta):
-    metrics = [q_reading, q_obstacle_buffer]
-    weights = [1, 0.3]
+    metrics = [q_obstacle_edge, q_little_turn, q_normalized_reading]
+    weights = [0.2, 0.3, 1]
     return q_combined(theta, world, last_theta, metrics, weights)
 
 
-def q_main(theta, world, last_theta, threshold=0):
-    # w_max = np.max(world.grid[0])
-    # if w_max > threshold:
-    #     print("Using destination metric")
-    #     return q_destination(theta, world, last_theta)
-    # else:
-        # print("Using exploration metric")
-        # return q_explore(theta, world, last_theta)
-    return q_explore(theta, world, last_theta)
+def q_main(theta, world, last_theta, threshold=0.75):
+    reading = q_normalized_reading(theta, world, last_theta)
+    if reading > threshold:
+        return q_destination(theta, world, last_theta)
+    else:
+        return q_explore(theta, world, last_theta)
 
 
 def max_metric(world, last_theta, metric):
-    x = np.arange(0, 2 * np.pi, 0.05)
-    y = np.vectorize(lambda ang: metric(ang, world, last_theta))(x)
+    # x = np.arange(0, 2 * np.pi, 0.05)
+    # y = np.vectorize(lambda ang: metric(ang, world, last_theta))(x)
+
+    x = np.arange(0, 2 * np.pi, 0.05).tolist()
+    x = np.array(filter(lambda a: world.is_valid(a), x))
+    y = np.zeros(len(x))
+    for i in range(len(x)):
+        y[i] = metric(x[i], world, last_theta)
 
     m_max = (0, 0)
     for i in range(len(x)):
         if y[i] > m_max[1]:
             m_max = x[i], y[i]
-    return m_max[0]
+    return m_max

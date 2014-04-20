@@ -1,6 +1,7 @@
 import time
 import math
 from mapping import world_renderer
+from mapping.simple_world_model import SimpleWorldModel
 from mapping.world_model import WorldModel
 from planning.direction_metric import max_metric, q_little_turn, q_reading, q_obstacle_edge, q_obstacle_buffer, q_main, \
     q_normalized_reading
@@ -12,12 +13,21 @@ from simulation.vision_simulation_agent import VisionSimulationAgent
 
 __author__ = 'josh'
 
-# agent = SimulationAgent(Configuration([255, 255, 0], (50, 250), [(150, 250), (150, 200), (150, 300)]))
-# agent = SimulationAgent(Configuration([255, 255, 0], (100, 350), [(100, 250), (100, 200), (100, 300)]))
-agent = VisionSimulationAgent([256, 256, 0], True)
-world = WorldModel()
+# agent = SimulationAgent(Configuration([255, 255, 0], (50, 300), [(100, 100), (300, 400), (400, 200)]))
+# agent = SimulationAgent(Configuration([255, 255, 0], (75, 250), [(35, 350), (115, 150)]))
+agent = SimulationAgent(Configuration([255, 255, 0], (50, 250), [(150, 250), (150, 200), (150, 300)]))
+
+# agent = VisionSimulationAgent([256, 256, 0], True, "env1.blend")
+# agent = VisionSimulationAgent([256, 256, 0], True, "env2.blend")
+# agent = VisionSimulationAgent([256, 256, 0], True, "env3.blend")
+
+# world = WorldModel()
+world = SimpleWorldModel()
+
 last_dir = 0
 turn_granularity = 0.2
+move_distance = 5
+local_threshold = 0.3
 show_stuff = True
 
 
@@ -44,10 +54,10 @@ def update(u_angles, u_values):
 
 
 def get_reading(start, end):
-    print("Getting reading from " + str(start) + " to " + str(end))
+    print("Getting reading from -" + str(start) + " to +" + str(end))
     agent.rotate_right(start)
     ang, angles, values = 0, [], []
-    while ang < end - start:
+    while ang < end + start:
         values.append(agent.get_reading())
         angles.append(agent.get_angle())
         ang += turn_granularity
@@ -68,15 +78,13 @@ angles, values = get_full_readings()
 update(angles, values)
 
 # Figure out where we're going to go
-best_dir = max_metric(world, last_dir, q_main)
+best_dir, value = max_metric(world, last_dir, q_main)
 print("Best direction: " + str(best_dir))
 
 # Show stuff
 if show_stuff:
-    world_renderer.render(world)
-    # plot_metric(world, last_dir, q_normalized_reading)
+    # world_renderer.render(world, best_dir)
     plot_metric(world, last_dir, q_little_turn, q_obstacle_edge, q_normalized_reading, q_main)
-    # plot_metric(world, last_dir, q_main)
 
 # Now move
 orient(best_dir)
@@ -84,23 +92,26 @@ agent.move_forward(3)
 last_dir = best_dir
 
 while True:
-    # TODO: Get a local reading (180 deg ?)
-    # angles, values = get_local_readings()
+    # Get a local reading (180 deg ?)
     angles, values = get_full_readings()
+    # angles, values = get_local_readings()
     update(angles, values)
 
     # Figure out where we're going to go
-    best_dir = max_metric(world, last_dir, q_main)
+    best_dir, value = max_metric(world, last_dir, q_main)
+    # if value < local_threshold:
+    #     print("Not enough useful information. Doing a full search...")
+    #     angles, values = get_full_readings()
+    #     update(angles, values)
+    #     best_dir, value = max_metric(world, last_dir, q_main)
     print("Best direction: " + str(best_dir))
 
     # Show stuff
     if show_stuff:
-        world_renderer.render(world)
-        # plot_metric(world, last_dir, q_normalized_reading)
+        # world_renderer.render(world, best_dir)
         plot_metric(world, last_dir, q_little_turn, q_obstacle_edge, q_normalized_reading, q_main)
 
     # Now move
-    best_dir = max_metric(world, last_dir, q_main)
     orient(best_dir)
-    agent.move_forward(4)
+    agent.move_forward(move_distance)
     last_dir = best_dir
