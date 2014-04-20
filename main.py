@@ -15,7 +15,7 @@ __author__ = 'josh'
 
 # agent = SimulationAgent(Configuration([255, 255, 0], (50, 300), [(100, 100), (300, 400), (400, 200)]))
 # agent = SimulationAgent(Configuration([255, 255, 0], (75, 250), [(35, 350), (115, 150)]))
-# agent = SimulationAgent(Configuration([255, 255, 0], (50, 250), [(150, 250), (150, 200), (150, 300)]))
+agent = SimulationAgent(Configuration([255, 255, 0], (50, 250), [(150, 250), (150, 200), (150, 300)]))
 
 # agent = VisionSimulationAgent([256, 256, 0], True, "env1.blend")
 # agent = VisionSimulationAgent([256, 256, 0], True, "env2.blend")
