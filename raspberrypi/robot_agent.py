@@ -29,10 +29,14 @@ class RobotAgent:
     def __init__(self):
         self.last_img = None
         self.angle = 0
+        self.obst_hue = "pink"
+        self.dest_hue = "green"
+        self.image_width = image_width
         pass
 
     def get_image(self):
-        return pi_camera.read()
+        filename = pi_camera.read()
+        return image_processor.open_img(filename)
 
     def search_full(self):
         """This will rotate the robot until the best angle is discovered"""
@@ -84,7 +88,7 @@ class RobotAgent:
         return value * constant
 
     def get_reading(self):
-        img = image_processor.open_img(self.get_image())
+        img = self.get_image()
         attract = self.calculate_value(img, "green", destination_constant)
         repel = self.calculate_value(img, "pink", obstacle_constant)
         return attract + repel
