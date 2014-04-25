@@ -26,6 +26,9 @@ class VisionSimulationAgent:
         self.last_img = None
         self.show_img = show_img
         self.blender = BlenderSource(env)
+        self.obst_hue = "red"
+        self.dest_hue = "green"
+        self.image_width = image_width
         pass
 
     def get_image(self):
@@ -116,8 +119,8 @@ class VisionSimulationAgent:
         self.robot[0] += dx
         self.robot[1] += dy
 
-        if self.show_img:
-            self.show(True)
+        # if self.show_img:
+        #     self.show(True)
 
     def move_backward(self, duration):
         dx = math.cos(self.robot[2]) * robot_translation_speed * duration

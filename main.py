@@ -6,6 +6,7 @@ from mapping.world_model import WorldModel
 from planning.direction_metric import max_metric, q_little_turn, q_reading, q_obstacle_edge, q_obstacle_buffer, q_main, \
     q_normalized_reading
 from planning.graph_metric import plot_metric
+from raspberrypi.robot_agent import RobotAgent
 from simulation.configuration import Configuration
 from simulation.simulation_agent import SimulationAgent
 # from simulation.vision_simulation_agent import VisionSimulationAgent
@@ -15,11 +16,13 @@ __author__ = 'josh'
 
 # agent = SimulationAgent(Configuration([255, 255, 0], (50, 300), [(100, 100), (300, 400), (400, 200)]))
 # agent = SimulationAgent(Configuration([255, 255, 0], (75, 250), [(35, 350), (115, 150)]))
-agent = SimulationAgent(Configuration([255, 255, 0], (50, 250), [(150, 250), (150, 200), (150, 300)]))
+# agent = SimulationAgent(Configuration([255, 255, 0], (50, 250), [(150, 250), (150, 200), (150, 300)]))
 
 # agent = VisionSimulationAgent([256, 256, 0], True, "env1.blend")
 # agent = VisionSimulationAgent([256, 256, 0], True, "env2.blend")
 # agent = VisionSimulationAgent([256, 256, 0], True, "env3.blend")
+
+agent = RobotAgent()
 
 # world = WorldModel()
 world = SimpleWorldModel()

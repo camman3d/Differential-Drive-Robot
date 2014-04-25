@@ -1,4 +1,5 @@
 import cv2
+import math
 import numpy as np
 
 __author__ = 'josh'
@@ -13,6 +14,7 @@ hues = {
     "red": -10,
     "pink": 160
 }
+sigma = 0.5
 
 
 def threshold(img, hue_name):
@@ -49,3 +51,38 @@ def open_img(filename):
 
 def save_img(img, filename):
     return cv2.imwrite(filename, img)
+
+
+def horizontal_weight(raw_weight, offset):
+    if offset is None:
+        return 0
+    offset = offset * 2 - 1
+    g_val = (2 / (sigma * math.sqrt(2 * math.pi))) * math.e ** (-(offset ** 2) / (2 * sigma ** 2))
+    return raw_weight * g_val
+
+
+def process(img, obst_hue, dest_hue, img_width):
+    obst_result = threshold(img, obst_hue)
+    dest_result = threshold(img, dest_hue)
+
+    # Fuzzy value 1: obstacle horizontal offset
+    if obst_result[1] is None:
+        v1 = None
+    else:
+        v1 = float(obst_result[1][0]) / float(img_width)
+
+    # Fuzzy value 2: destination horizontal offset
+    if dest_result[1] is None:
+        v2 = None
+    else:
+        v2 = float(dest_result[1][0]) / float(img_width)
+
+    # Fuzzy value 3: balanced weight of obstacle to destination. 1 = all obst, 0 = all dest
+    o_w = horizontal_weight(obst_result[0], v1)
+    d_w = horizontal_weight(dest_result[0], v2)
+    if o_w is 0 and d_w is 0:
+        v3 = 0.5
+    else:
+        v3 = float(o_w) / float(d_w + o_w)
+
+    return v1, v2, v3
