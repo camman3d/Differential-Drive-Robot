@@ -60,10 +60,21 @@ def horizontal_weight(raw_weight, offset):
     g_val = (2 / (sigma * math.sqrt(2 * math.pi))) * math.e ** (-(offset ** 2) / (2 * sigma ** 2))
     return raw_weight * g_val
 
+obst_thresh = 1500
+dest_thresh = 1500
+
 
 def process(img, obst_hue, dest_hue, img_width):
+    print("Obstacles: " + obst_hue + ", Destination: " + dest_hue)
     obst_result = threshold(img, obst_hue)
     dest_result = threshold(img, dest_hue)
+    print(obst_hue + ": " + str(obst_result[0]))
+    print(dest_hue + ": " + str(dest_result[0]))
+    if obst_result[0] < obst_thresh:
+        obst_result = 0, None
+    if dest_result[0] < dest_thresh:
+        dest_result = 0, None
+
 
     # Fuzzy value 1: obstacle horizontal offset
     if obst_result[1] is None:

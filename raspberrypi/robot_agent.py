@@ -11,8 +11,8 @@ __author__ = 'josh'
 rotation_granularity = 0.5
 reading_threshold = 0
 
-robot_translation_time = 3
-robot_rotation_time = 1
+robot_translation_time = 0.5
+robot_rotation_time = 2
 
 cap = 20000
 sigma = 0.5

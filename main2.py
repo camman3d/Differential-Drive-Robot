@@ -1,18 +1,18 @@
 from fuzzy import controller
 import image_processor
-#from raspberrypi.robot_agent import RobotAgent
-from simulation.vision_simulation_agent import VisionSimulationAgent
+from raspberrypi.robot_agent import RobotAgent
+#from simulation.vision_simulation_agent import VisionSimulationAgent
 
 __author__ = 'josh'
 
 # agent = VisionSimulationAgent([256, 256, 0], True, "env1.blend")
-agent = VisionSimulationAgent([256, 256, 0], True, "env2.blend")
+#agent = VisionSimulationAgent([256, 256, 0], True, "env2.blend")
 # agent = VisionSimulationAgent([256, 256, 0], True, "env3.blend")
 
-# agent = RobotAgent()
+agent = RobotAgent()
 
 
-turn_granularity = 0.2
+turn_granularity = 0.5
 move_distance = 5
 
 while True:

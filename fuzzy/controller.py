@@ -45,7 +45,7 @@ def obst_left(fuzzy_vars):
 
 
 def obst_right(fuzzy_vars):
-    if fuzzy_vars[0] is not None and fuzzy_vars[0] <= 0.2 and fuzzy_vars[2] > 0.5:
+    if fuzzy_vars[0] is not None and fuzzy_vars[0] >= 0.8 and fuzzy_vars[2] > 0.5:
         return MoveForward
 
 
